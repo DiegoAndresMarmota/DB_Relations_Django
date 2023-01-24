@@ -22,6 +22,9 @@ def create(request):
     )
     art3.save()
 
-    result = art1.reporter.first_name
+    # result = art1.reporter.first_name
+    # result = rep.article_set.all()
+    # result = rep.article_set.filter(headline="Lorem ipsum dorime")
+    result = rep.article_set.count()
 
     return HttpResponse(result)
