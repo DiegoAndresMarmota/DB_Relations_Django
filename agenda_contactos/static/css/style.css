@@ -1,0 +1,34 @@
+:root {
+    --color-primary: #f7e522 ;
+    --color-secundary: #cf9023;
+    --color-text: #000000;
+    --font-main: Montserrat Semi Bold;
+    --font-text: Montserrat Light Italic;
+}
+
+/* Main Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-text);
+    color: var(--color-text);
+    background: var(--color-primary);
+}
+
+@font-face {
+    font-family: Montserrat Light Italic;
+    src: url('../fonts/MontserratAlternates-LightItalic.otf');
+}
+
+@font-face{
+    font-family: Montserrat Semi Bold;
+    src: url('../fonts/MontserratAlternates-SemiBold.otf');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+}
+
+/* Layout Settings */
