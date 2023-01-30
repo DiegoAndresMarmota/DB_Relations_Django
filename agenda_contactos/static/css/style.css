@@ -69,5 +69,16 @@ main {
     margin: 50px;
     justify-content: center;
     align-items: flex-start;
+}
 
+list {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    width: 50px;
+    list-style-type: none;
+}
+
+.list li {
+    padding: 20px;
 }
