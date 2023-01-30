@@ -1,6 +1,6 @@
 :root {
     --color-primary: #f7e522 ;
-    --color-secundary: #cf9023;
+    --color-secundary: #f3ba00;
     --color-text: #000000;
     --font-main: Montserrat Semi Bold;
     --font-text: Montserrat Light Italic;
@@ -32,3 +32,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Layout Settings */
+
+nav {
+    display: flex;
+    width: 100vw;
+    height: 80px;
+    background-color: var(--color-secundary);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: var(--font-main);
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    margin: 50px;
+    justify-content: center;
+    align-items: flex-start;
+
+}
