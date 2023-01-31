@@ -7,13 +7,13 @@
 {%block 'content' %}
 <span class="aux-btns"><a href="{% url 'contact' %}">Volver atrás</a></span>
 <ul class="list">
-    <li>{{contact.name}}</li>
-    <li>{{contact.last_name}}</li>
-    <li>{{contact.phone}}</li>
-    <li>{{contact.mobile}}</li>
-    <li>{{contact.email}}</li>
-    <li>{{contact.company}}</li>
-    <li>{{contact.date}}</li>
-    <li>{{contact.notes}}</li>
+    <li><b>Nombre: </b>{{contact.name}}</li>
+    <li><b>Apellidos: </b>{{contact.last_name}}</li>
+    <li><b>Teléfono: </b>{{contact.phone}}</li>
+    <li><b>Móvil: </b>{{contact.mobile}}</li>
+    <li><b>Email: </b>{{contact.email}}</li>
+    <li><b>Compañía: </b>{{contact.company}}</li>
+    <li><b>Fecha de incorporación: </b>{{contact.date}}</li>
+    <li><b>Notas anexas: </b>{{contact.notes}}</li>
 </ul>
 {% endblock %}
