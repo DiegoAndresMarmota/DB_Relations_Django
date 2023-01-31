@@ -2,12 +2,23 @@
 
 {% block 'title' %} 
     Contactos 
-{% endblock %} 
+{% endblock %}
 
 {%block 'content' %}
+<form>
+    <input type="text" name="search" placeholder="Buscar Contacto...">
+    <input type="submit" name="Buscar">
+</form>
 <ul class="list">
-    {% for contact in contacts %}
-        <li>{{contact}}</li>
-    {% endfor %}
+  {% for contact in contacts %}
+  <li>
+    {{contact}}
+    <span>
+      <a href="#" class="btn-delete">Borrar</a>
+      <a href="#" class="btn-edit">Editar</a>
+      <a href="#" class="btn-watch">Ver</a>
+    </span>
+  </li>
+  {% endfor %}
 </ul>
 {% endblock %}

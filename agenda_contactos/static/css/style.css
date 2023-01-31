@@ -47,7 +47,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30vw;
+    width: 90vw;
 }
 
 nav ul li a {
@@ -65,20 +65,54 @@ nav ul li a:hover {
 
 main {
     display: flex;
+    flex-direction: column;
     width: 100vw;
     margin: 50px;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-list {
+.list {
     display: flex;
     flex-direction: column;
+    border: 1px solid var(--color-text);
     border: 2px solid;
-    width: 50px;
+    width: 50%;
     list-style-type: none;
 }
 
 .list li {
     padding: 20px;
+    width: 100%;
+    border-bottom: 1px solid var(--color-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.span {
+    background: white;
+}
+
+.btn {
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration:none;
+    background-color: white;
+}
+
+.btn-edit {
+    background-color: blue;
+    color: white;
+}
+
+.btn-delete {
+    background-color: red;
+    color: white;
+}
+
+.btn-watch {
+    background-color: green;
+    color: white;
 }
