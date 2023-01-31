@@ -10,7 +10,8 @@
 {% endblock %}
 
 {%block 'content' %}
-<form>
+<form action="{% url "contact_edit" id=id %}" method="POST">
+    {% csrf_token %}
     <table>
     {{form.as_table}}
     </table>
