@@ -14,7 +14,6 @@
     box-sizing: border-box;
     font-family: var(--font-text);
     color: var(--color-text);
-    background: var(--color-primary);
 }
 
 @font-face {
@@ -107,12 +106,52 @@ main {
     color: white;
 }
 
+.btn-edit:hover {
+    background-color: white;
+    color: blue;
+}
+
 .btn-delete {
     background-color: red;
     color: white;
 }
 
+.btn-delete:hover {
+    background-color: white;
+    color: red
+}
+
 .btn-watch {
     background-color: green;
+    color: white;
+}
+
+.btn-watch:hover {
+    background-color: white;
+    color: green
+}
+
+.search {
+    margin: 20px;
+    width: 50%;   
+}
+
+.search-bar {
+    padding: 10px;
+    width: 80%;
+}
+
+.btn-search {
+    width: 19%;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: 0;
+    box-shadow: 0;
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    background-color: var(--color-secundary);
     color: white;
 }

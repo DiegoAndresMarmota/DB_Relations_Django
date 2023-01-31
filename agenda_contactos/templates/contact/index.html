@@ -5,9 +5,9 @@
 {% endblock %}
 
 {%block 'content' %}
-<form>
-    <input type="text" name="search" placeholder="Buscar Contacto...">
-    <input type="submit" name="Buscar">
+<form class="search">
+    <input type="text" name="search" class="search-bar" placeholder="Buscar Contacto...">
+    <input type="submit" class="btn btn-search" name="Buscar">
 </form>
 <ul class="list">
   {% for contact in contacts %}
