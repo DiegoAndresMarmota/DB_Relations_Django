@@ -4,6 +4,18 @@
     Contactos 
 {% endblock %}
 
+{% block 'styles' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/forms.css' %}" />
+{% endblock %}
+
 {%block 'content' %}
-    {{form}}
+<form>
+    <table>
+    {{form.as_table}}
+    </table>
+    <div class="btn-wrapper">
+        <input type="submit" value="Enviar" class="btn-send"/>
+    </div>
+</form>
 {% endblock %}
