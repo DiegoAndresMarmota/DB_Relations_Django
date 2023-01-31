@@ -10,6 +10,7 @@
 {% endblock %}
 
 {%block 'content' %}
+<span class="aux-btns"><a href="{% url 'contact' %}">Volver atrás</a></span>
 <form action="{% url "contact_edit" id=id %}" method="POST">
     {% csrf_token %}
     <table>
