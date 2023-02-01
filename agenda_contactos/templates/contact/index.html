@@ -9,7 +9,7 @@
     <input type="text" name="search" class="search-bar" placeholder="Buscar Contacto...">
     <input type="submit" class="btn btn-search" name="Buscar">
 </form>
-<span class="aux-btns"><a href="{% url 'contact' %}">Ver todos</a><a href="#">Añadir</a></span>
+<span class="aux-btns"><a href="{% url 'contact' %}">Ver todos</a><a href="{% url 'contact_create' %}">Añadir</a></span>
 <ul class="list">
   {% for contact in contacts %}
   <li>

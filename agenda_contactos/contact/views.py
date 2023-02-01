@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from unicodedata import name
+from django.shortcuts import render, redirect
 from .models import Contact
 from .forms import ContactForm
 from django.contrib import messages
@@ -33,3 +34,16 @@ def edit(request, id):
         context = {"form": form, "id": id}
         messages.success(request, "El Perfil del contacto se ha actualizado.")
         return render(request, "contact/edit.html", context)
+
+
+def create(request):
+    if request.method == "GET":
+        form = ContactForm()
+        context = {"form": form}
+        return render(request, "contact/create.html", context)
+
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid:
+            form.save()
+        return redirect("contact")
