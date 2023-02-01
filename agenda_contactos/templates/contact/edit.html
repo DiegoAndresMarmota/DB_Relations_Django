@@ -1,19 +1,33 @@
 {% extends 'layout/base.html' %} 
 
 {% block 'title' %} 
-    Contactos {{ contact.name}}
+    Crear Contacto
+{% endblock %}
+
+{% block 'styles' %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}" />
 {% endblock %}
 
 {%block 'content' %}
-<span class="aux-btns"><a href="{% url 'contact' %}">Volver atrás</a></span>
-<ul class="list">
-    <li><b>Nombre: </b>{{contact.name}}</li>
-    <li><b>Apellidos: </b>{{contact.last_name}}</li>
-    <li><b>Teléfono: </b>{{contact.phone}}</li>
-    <li><b>Móvil: </b>{{contact.mobile}}</li>
-    <li><b>Email: </b>{{contact.email}}</li>
-    <li><b>Compañía: </b>{{contact.company}}</li>
-    <li><b>Fecha de incorporación: </b>{{contact.date}}</li>
-    <li><b>Notas anexas: </b>{{contact.notes}}</li>
-</ul>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="messages-success"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %} 
+
+<span class="aux-btns-form"><a href="{% url 'contact' %}">Volver atrás</a></span>
+
+<form action="{% url "contact_edit" id=id %}" method="POST">
+    {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <div class="btn-wrapper">
+            <input type="submit" value="Enviar" class="btn-send"/>
+        </div>
+</form>
+
 {% endblock %}
