@@ -167,3 +167,10 @@ main {
     padding-right: 10px;
     text-decoration: none;
 }
+
+.messages-success {
+    width: 100%;
+    padding: 15%;
+    background-color: green;
+    color: white;
+}
