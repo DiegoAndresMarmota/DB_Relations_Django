@@ -1,4 +1,16 @@
-{% extends 'layout/base.html' %} {% block 'title' %} Inicio {% endblock %}
+{% extends 'layout/base.html' %} 
+
+{% block 'title' %} 
+    Inicio 
+{% endblock %}
+
 {%block 'content' %}
-<h1>Las + Amarillas</h1>
+
+<h1>Vault404 - Registro de Boveda </h1>
+
+<div class="cards">
+        <a href="{% url 'contact' %}" class="card">Proveedores</a>
+        <a href="{% url 'todo' %}" class="card">Productos</a>
+</div>
+
 {% endblock %}
