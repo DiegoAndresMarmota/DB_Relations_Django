@@ -1,15 +1,9 @@
 {% extends 'layout/base.html' %} {% block 'title' %} Producto {% endblock %}
 {%block 'content' %}
 <h1>Productos</h1>
-<form class="search" action="{% url 'todo' %}" method="GET">
-  <input
-    type="text"
-    name="search"
-    class="search-bar"
-    placeholder="Buscar Producto..."
-  />
-  <input type="submit" class="btn btn-search" name="Buscar" />
-</form>
+
+{% include 'todo/partials/search.html' %}
+
 <span class="aux-btns"
   ><a href="{% url 'todo' %}">Ver todos</a
   ><a href="{% url 'todo_create' %}">Añadir</a></span
@@ -19,12 +13,8 @@
   <li>
     {{todo}}
     <span>
-      <a href="{% url 'todo_delete' id=todo.id %}" class="btn-delete"
-        >Borrar</a
-      >
-      <a href="{% url 'todo_edit' id=todo.id %}" class="btn-edit"
-        >Editar</a
-      >
+      <a href="{% url 'todo_delete' id=todo.id %}" class="btn-delete">Borrar</a>
+      <a href="{% url 'todo_edit' id=todo.id %}" class="btn-edit">Editar</a>
       <a href="{% url 'todo_view' id=todo.id %}" class="btn-watch">Ver</a>
     </span>
   </li>
