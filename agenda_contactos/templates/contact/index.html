@@ -1,15 +1,9 @@
 {% extends 'layout/base.html' %} {% block 'title' %} Proveedor {% endblock %}
 {%block 'content' %}
 <h1>Proveedor</h1>
-<form class="search" action="{% url 'contact' %}" method="GET">
-  <input
-    type="text"
-    name="search"
-    class="search-bar"
-    placeholder="Buscar Proveedor..."
-  />
-  <input type="submit" class="btn btn-search" name="Buscar" />
-</form>
+
+{% include 'contact/partials/search.html' %}
+
 <span class="aux-btns"
   ><a href="{% url 'contact' %}">Ver todos</a
   ><a href="{% url 'contact_create' %}">Añadir</a></span
