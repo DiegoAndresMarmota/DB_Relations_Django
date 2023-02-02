@@ -1,4 +1,3 @@
-from unicodedata import name
 from django.shortcuts import render, redirect
 from .models import Contact
 from .forms import ContactForm
@@ -47,3 +46,9 @@ def create(request):
         if form.is_valid:
             form.save()
         return redirect("contact")
+
+
+def delete(request, id):
+    contact = Contact.objects.get(id=id)
+    contact.delete()
+    return redirect("contact")

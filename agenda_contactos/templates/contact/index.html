@@ -1,22 +1,29 @@
-{% extends 'layout/base.html' %} 
-
-{% block 'title' %} 
-    Contactos 
-{% endblock %}
-
+{% extends 'layout/base.html' %} {% block 'title' %} Contactos {% endblock %}
 {%block 'content' %}
 <form class="search" action="{% url 'contact' %}" method="GET">
-    <input type="text" name="search" class="search-bar" placeholder="Buscar Contacto...">
-    <input type="submit" class="btn btn-search" name="Buscar">
+  <input
+    type="text"
+    name="search"
+    class="search-bar"
+    placeholder="Buscar Contacto..."
+  />
+  <input type="submit" class="btn btn-search" name="Buscar" />
 </form>
-<span class="aux-btns"><a href="{% url 'contact' %}">Ver todos</a><a href="{% url 'contact_create' %}">Añadir</a></span>
+<span class="aux-btns"
+  ><a href="{% url 'contact' %}">Ver todos</a
+  ><a href="{% url 'contact_create' %}">Añadir</a></span
+>
 <ul class="list">
   {% for contact in contacts %}
   <li>
     {{contact}}
     <span>
-      <a href="#" class="btn-delete">Borrar</a>
-      <a href="{% url 'contact_edit' id=contact.id %}" class="btn-edit">Editar</a>
+      <a href="{% url 'contact_delete' id=contact.id %}" class="btn-delete"
+        >Borrar</a
+      >
+      <a href="{% url 'contact_edit' id=contact.id %}" class="btn-edit"
+        >Editar</a
+      >
       <a href="{% url 'contact_view' id=contact.id %}" class="btn-watch">Ver</a>
     </span>
   </li>
