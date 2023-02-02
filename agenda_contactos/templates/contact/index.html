@@ -1,11 +1,11 @@
-{% extends 'layout/base.html' %} {% block 'title' %} Contactos {% endblock %}
+{% extends 'layout/base.html' %} {% block 'title' %} Proveedor {% endblock %}
 {%block 'content' %}
 <form class="search" action="{% url 'contact' %}" method="GET">
   <input
     type="text"
     name="search"
     class="search-bar"
-    placeholder="Buscar Contacto..."
+    placeholder="Buscar Proveedor..."
   />
   <input type="submit" class="btn btn-search" name="Buscar" />
 </form>

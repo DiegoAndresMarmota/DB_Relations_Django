@@ -31,7 +31,7 @@ def edit(request, id):
         if form.is_valid():
             form.save()
         context = {"form": form, "id": id}
-        messages.success(request, "El Perfil del contacto se ha actualizado.")
+        messages.success(request, "El Perfil del proveedor se ha actualizado.")
         return render(request, "contact/edit.html", context)
 
 
